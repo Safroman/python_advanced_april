@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная страница</title>
+</head>
+<body>
+    <form action="/admin" method="post">
+        <p><b>Добавить категорию</b></p>
+        <input type="text" name="category" required placeholder="навзвание категории">
+        <input type="submit">
+    </form>
+
+    <form action="/admin" method="post">
+        <p><b>Добавить товар</b></p>
+        <input type="text" name="item" required placeholder="навзвание товара">
+        <input type="number" name="category" required placeholder="код категории">
+        <select id = "myList" name="availability" required>
+            <option value="" disabled selected>где товар</option>
+            <option value = "в магазине">в магазине</option>
+            <option value = "на складе">на складе</option>
+        </select>
+        <input type="number" name="price" required placeholder="цена">
+        <input type="number" name="amount" required placeholder="кол-во в наличии">
+        <input type="submit">
+    </form>
+
+</body>
+</html>

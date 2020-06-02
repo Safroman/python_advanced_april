@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная страница</title>
+</head>
+<body>
+    <h1>Доступные товары:</h1>
+
+    {% for key, value in goods.items() %}
+        <h3> {{key}}. <a href="{{url_for('show_item', category=category,item=value)}}"> {{value}}</a></h3>
+    {% endfor %}
+</body>
+</html>

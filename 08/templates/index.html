@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная страница</title>
+</head>
+<body>
+    <h1>Доступные категории:</h1>
+
+    {% for el in categories %}
+        <h3> {{el[0]}}. <a href="{{el[1]}}"> {{el[1]}}</a></h3>
+    {% endfor %}
+</body>
+</html>
