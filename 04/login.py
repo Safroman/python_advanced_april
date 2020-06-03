@@ -34,8 +34,8 @@ def sign_in():
 
     pw = input('type your password: ')
 
-    while pw != u.u_pw:
+    while pw != u.pw:
         pw = input('password is incorrect, try again: ')
 
-    print(f'Welcome back {u.u_name}\n')
+    print(f'Welcome back {u.name}\n')
     return u

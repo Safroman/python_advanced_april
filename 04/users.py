@@ -7,8 +7,8 @@ class User:
     population = {}
 
     def __init__(self, name, password, role='user'):
-        self._u_name = name
-        self._u_pw = password
+        self._name = name
+        self._pw = password
         self._role = role
         self._reg_date = datetime.date.today()
         self._posts = []
@@ -16,15 +16,15 @@ class User:
         User.population[name] = self
 
     def __str__(self):
-        return f'user {self._u_name}'
+        return f'user {self._name}'
 
     @property
-    def u_name(self):
-        return self._u_name
+    def name(self):
+        return self._name
 
     @property
-    def u_pw(self):
-        return self._u_pw
+    def pw(self):
+        return self._pw
 
     @property
     def role(self):
@@ -38,5 +38,5 @@ class User:
     def posts(self):
         return self._posts
 
-    def new_post(self, post):
+    def add_post(self, post):
         self._posts.append(post)
